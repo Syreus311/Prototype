@@ -78,10 +78,10 @@ El siguiente diagrama muestra la estructura del patrón implementado:
 
 ## Explicación de la Implementación
 El patrón Prototype ha sido implementado utilizando las siguientes clases principales:
-- **Vehicle**: Explicación del propósito de la clase.
-- **VehiclePrototype**: Explicación del propósito de la clase.
-- **VehicleRegistry**: Explicación del propósito de la clase.
-- **Main**: Explicación del propósito de la clase.
+- **Vehicle**: Vehicle es una implementación concreta que puede ser clonada. Contiene la lógica de negocio para modificar las propiedades del vehículo, pero también está definida para ser clonada mediante el método clone.
+- **VehiclePrototype**: Funciona como una interfaz o clase base para los objetos que se van a clonar. Contiene el método clone(), que es implementado por la clase concreta para proporcionar la lógica de clonación.
+- **VehicleRegistry**: Se encarga de almacenar y gestionar los prototipos de los vehículos. Los objetos clonados se gestionan a través de esta clase, y también contiene un mecanismo para recuperar una copia de un prototipo registrado mediante su identificador.
+- **Main**: Main actúa como el cliente en este patrón, ya que es la clase encargada de solicitar la clonación de los objetos mediante la interacción con el VehicleRegistry para obtener las instancias clonadas.
 
 ---
 
