@@ -54,7 +54,7 @@ mvn clean compile
 
 3. **Ejecutar el proyecto:**
 ```bash
-mvn exec:java -Dexec.mainClass="com.ejemplo.Main"
+mvn exec:java
 ```
 
 ---
