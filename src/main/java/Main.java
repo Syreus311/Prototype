@@ -1,8 +1,9 @@
-import prototype.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import prototype.Vehicle;
+import prototype.VehicleRegistry;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Main {
         Vehicle baseVehicle = new Vehicle("Chasis universal", "Base", "Gasolina", "Estándar", "Blanco");
         registry.addPrototype("base_vehicle", baseVehicle);
 
-        System.out.println("¡Bienvenido al sistema de clonación de vehículos!\\n");
+        System.out.println("¡Bienvenido al sistema de clonación de vehículos!\n");
 
         boolean continueCloning = true;
 
