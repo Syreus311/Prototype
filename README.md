@@ -69,10 +69,10 @@ Seleccione una opción (1-3):
 ## Diagrama UML
 
 El siguiente diagrama muestra la estructura estándar del patrón Prototype:
-![Diagrama UML] (https://github.com/Syreus/Prototype/raw/main/uml1.png)
+![Diagrama UML] (https://github.com/Syreus311/Prototype/raw/main/uml1.png)
 
 El siguiente diagrama muestra la estructura del patrón implementado:
-![Diagrama UML] (https://github.com/Syreus/Prototype/raw/main/uml2.png)
+![Diagrama UML] (https://github.com/Syreus311/Prototype/raw/main/uml2.png)
 
 ---
 
