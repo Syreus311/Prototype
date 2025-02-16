@@ -15,6 +15,7 @@ Prototype
 │
 ├── pom.xml                # Archivo de configuración de Maven
 ├── README.md              # Documentación del proyecto
+|
 ├── uml                    
 |   |── uml1.png           # Imagen con el diagrama UML estándar
 |   └── uml2.png           # Imagen con el diagrama UML implementado
