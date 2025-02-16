@@ -52,7 +52,16 @@ mvn exec:java
 ## Ejemplo de Ejecución
 Al ejecutar el programa, deberías ver la siguiente salida:
 ```
-[Ejemplo de resultado del programa]
+¡Bienvenido al sistema de clonación de vehículos!
+
+=============================================
+       CLONACIÓN DE UN NUEVO VEHÍCULO
+=============================================
+Seleccione la marca:
+1. Nissan
+2. Ferrari
+3. Toyota
+Seleccione una opción (1-3): 1
 ```
 
 ---
@@ -69,14 +78,15 @@ El siguiente diagrama muestra la estructura del patrón implementado:
 
 ## Explicación de la Implementación
 El patrón [Nombre del Patrón] ha sido implementado utilizando las siguientes clases principales:
-- **[Clase 1]**: Explicación del propósito de la clase.
-- **[Clase 2]**: Explicación del propósito de la clase.
-- **[Clase 3]**: Explicación del propósito de la clase.
+- **Vehicle**: Explicación del propósito de la clase.
+- **VehiclePrototype**: Explicación del propósito de la clase.
+- **VehicleRegistry**: Explicación del propósito de la clase.
+- **Main**: Explicación del propósito de la clase.
 
 ---
 
 ## Contribuciones
 Este proyecto fue desarrollado por:
-- [Katherin Juliana Moreno Carvajal]
-- [Santiago Navarro Cuy]
-- [Mariana Salas Gutiérrez]
+- Katherin Juliana Moreno Carvajal
+- Santiago Navarro Cuy
+- Mariana Salas Gutiérrez
