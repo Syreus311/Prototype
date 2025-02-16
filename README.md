@@ -8,17 +8,17 @@ El patrón Prototype es utilizado para [describir el propósito del patrón]. Es
 La estructura del proyecto sigue el estándar de **Maven**:
 
 ```
-nombre-del-proyecto
+Prototype
 │
 ├── pom.xml                # Archivo de configuración de Maven
 ├── README.md              # Documentación del proyecto
-└── src
-    ├── main
-    │   ├── java
-    │   │   └── [paquete base]    # Código fuente principal
-    │   └── resources             # Recursos adicionales
-    └── test
-        └── java                  # Pruebas unitarias
+└── src/main/java          # Carpeta con los códigos
+    ├── Main.java          # Para ejecutar el programa
+    │
+    └── Prototype
+        |── Vehicle.java                 # Clase de Java
+        |── VehiclePrototype.java        # Clase de Java
+        └── VehicleRegistry.java         # Clase de Java
 ```
 
 ---
@@ -84,7 +84,6 @@ El patrón [Nombre del Patrón] ha sido implementado utilizando las siguientes c
 
 ## Contribuciones
 Este proyecto fue desarrollado por:
-- [Nombre del Estudiante 1]
-- [Nombre del Estudiante 2]
-- [Nombre del Estudiante 3]
-
+- [Katherin Juliana Moreno Carvajal]
+- [Santiago Navarro Cuy]
+- [Mariana Salas Gutiérrez]
