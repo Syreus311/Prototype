@@ -2,7 +2,8 @@
 
 ## Descripción del Patrón
 
-El patrón Prototype es utilizado para [describir el propósito del patrón]. Este proyecto demuestra su implementación mediante un ejemplo práctico en **Java** utilizando **Maven** como gestor de dependencias.
+El patrón Prototype es utilizado para crear (clonar) objetos duplicados de una instancia existente sin que el código dependa de sus clases específicas y delegar el proceso de clonación a
+los propios objetos que están siendo clonados. Este proyecto demuestra su implementación mediante un ejemplo práctico en **Java** utilizando **Maven** como gestor de dependencias.
 
 ## Estructura del Proyecto
 La estructura del proyecto sigue el estándar de **Maven**:
@@ -56,9 +57,12 @@ Al ejecutar el programa, deberías ver la siguiente salida:
 ---
 
 ## Diagrama UML
-El siguiente diagrama muestra la estructura del patrón implementado:
 
-![Diagrama UML](uml/diagrama.png)
+El siguiente diagrama muestra la estructura estándar del patrón Prototype:
+![Diagrama UML](uml/uml1.png)
+
+El siguiente diagrama muestra la estructura del patrón implementado:
+![Diagrama UML](uml/uml2.png)
 
 ---
 
