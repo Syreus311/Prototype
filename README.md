@@ -13,11 +13,14 @@ Prototype
 │
 ├── pom.xml                # Archivo de configuración de Maven
 ├── README.md              # Documentación del proyecto
+├── uml                    
+|   |── uml1.png           # Imagen con el diagrama UML estándar
+|   └── uml2.png           # Imagen con el diagrama UML implementado
 └── src/main/java          # Carpeta con los códigos
     |
     ├── Main.java          # Para ejecutar el programa
     │
-    └── Prototype
+    └── prototype
         |── Vehicle.java                 # Clase de Java
         |── VehiclePrototype.java        # Clase de Java
         └── VehicleRegistry.java         # Clase de Java
