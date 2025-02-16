@@ -5,6 +5,8 @@
 El patrón Prototype es utilizado para crear (clonar) objetos duplicados de una instancia existente sin que el código dependa de sus clases específicas y delegar el proceso de clonación a
 los propios objetos que están siendo clonados. Este proyecto demuestra su implementación mediante un ejemplo práctico en **Java** utilizando **Maven** como gestor de dependencias.
 
+---
+
 ## Estructura del Proyecto
 La estructura del proyecto sigue el estándar de **Maven**:
 
@@ -31,6 +33,8 @@ Prototype
 
 ## Dependencias Utilizadas
 Este proyecto no utiliza dependencias adicionales que deban ser definidas en el archivo **pom.xml**.
+
+---
 
 ## Instrucciones de Instalación
 
