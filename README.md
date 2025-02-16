@@ -66,6 +66,7 @@ Al ejecutar el programa, deberías ver la siguiente salida:
 3. Comparar memoria entre dos vehículos clonados
 4. Salir
 Seleccione una opción (1-4):
+```
 ---
 
 ## Diagrama UML
