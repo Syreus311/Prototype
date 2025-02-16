@@ -11,23 +11,98 @@ public class Main {
         List<Vehicle> clonedVehicles = new ArrayList<>();
 
         // Agregar un vehículo base al registro
-        Vehicle baseVehicle = new Vehicle("Generico", "Base", "Gasolina", 0, "Blanco");
+        Vehicle baseVehicle = new Vehicle("Chasis universal", "Base", "Gasolina", "Estándar", "Blanco");
         registry.addPrototype("base_vehicle", baseVehicle);
 
-        System.out.println("¡Bienvenido al sistema de clonación de vehículos!\n");
+        System.out.println("¡Bienvenido al sistema de clonación de vehículos!\\n");
 
         boolean continueCloning = true;
 
         while (continueCloning) {
+            // Menú principal antes de clonar un vehículo
+            boolean validChoice = false;
+            while (!validChoice) {
+                System.out.println("=============================================");
+                System.out.println("              MENÚ PRINCIPAL                 ");
+                System.out.println("=============================================");
+                System.out.println("1. Clonar un nuevo vehículo");
+                System.out.println("2. Ver cuántos vehículos se han clonado y sus características");
+                System.out.println("3. Comparar memoria entre dos vehículos clonados");
+                System.out.println("4. Salir");
+
+                System.out.print("Seleccione una opción (1-4): ");
+                if (scanner.hasNextInt()) {
+                    int option = scanner.nextInt();
+                    scanner.nextLine(); // Consumir la nueva línea
+
+                    switch (option) {
+                        case 1:
+                            validChoice = true;
+                            break; // Salir del menú y proceder con la clonación
+                        case 2:
+                            System.out.println("\n=============================================");
+                            System.out.println("        VEHÍCULOS CLONADOS HASTA AHORA       ");
+                            System.out.println("=============================================");
+                            System.out.println("Total de vehículos clonados: " + clonedVehicles.size());
+                            for (int i = 0; i < clonedVehicles.size(); i++) {
+                                System.out.println("\n---------------------------------------------");
+                                System.out.println("Vehículo #" + (i + 1) + ":");
+                                clonedVehicles.get(i).showInfo();
+                                System.out.println("---------------------------------------------");
+                            }
+                            break;
+                        case 3:
+                            if (clonedVehicles.size() < 2) {
+                                System.out.println("No hay suficientes vehículos clonados para comparar.");
+                                break;
+                            }
+
+                            System.out.println("Seleccione los vehículos que desea comparar:");
+                            for (int i = 0; i < clonedVehicles.size(); i++) {
+                                System.out.println((i + 1) + ". Vehículo #" + (i + 1));
+                            }
+
+                            System.out.print("Seleccione el primer vehículo (1-" + clonedVehicles.size() + "): ");
+                            int firstVehicle = scanner.nextInt() - 1;
+
+                            System.out.print("Seleccione el segundo vehículo (1-" + clonedVehicles.size() + "): ");
+                            int secondVehicle = scanner.nextInt() - 1;
+                            scanner.nextLine(); // Consumir la nueva línea
+
+                            if (firstVehicle >= 0 && firstVehicle < clonedVehicles.size() &&
+                                    secondVehicle >= 0 && secondVehicle < clonedVehicles.size()) {
+                                boolean memoryComparison = clonedVehicles.get(firstVehicle) == clonedVehicles.get(secondVehicle);
+                                System.out.println("¿Los dos vehículos seleccionados comparten la misma referencia de memoria? " + memoryComparison);
+                            } else {
+                                System.out.println("Selección inválida. Intente de nuevo.");
+                            }
+                            break;
+                        case 4:
+                            System.out.println("\nSaliendo del sistema...");
+                            continueCloning = false;
+                            validChoice = true;
+                            break;
+                        default:
+                            System.out.println("Error: Opción no válida. Inténtelo de nuevo.");
+                    }
+                } else {
+                    System.out.println("Error: Ingrese solo números entre 1 y 4.");
+                    scanner.next();
+                }
+            }
+
+            if (!continueCloning) break;
+
+            // Clonación del vehículo después del menú
             System.out.println("=============================================");
             System.out.println("       CLONACIÓN DE UN NUEVO VEHÍCULO       ");
             System.out.println("=============================================");
 
             Vehicle clonedVehicle = (Vehicle) registry.getClone("base_vehicle");
 
-            // Selección de marca
-            String[] brands = {"Nissan", "Ferrari", "Toyota"};
-            clonedVehicle.setBrand(selectOption(scanner, "Seleccione la marca:", brands));
+            // Selección de carrocería
+            String[] bodyworks = {"Sedan", "SUV", "Deportivo", "Pickup"};
+            clonedVehicle.setBodywork(selectOption(scanner, "Seleccione el tipo de carrocería:", bodyworks));
 
             System.out.println(); // Espacio para mejorar visualización
 
@@ -43,14 +118,9 @@ public class Main {
 
             System.out.println();
 
-            // Ingreso de kilometraje
-            System.out.print("Ingrese el kilometraje (solo números): ");
-            while (!scanner.hasNextInt()) {
-                System.out.println("Error: Ingrese solo números para el kilometraje.");
-                scanner.next();
-            }
-            clonedVehicle.setMileage(scanner.nextInt());
-            scanner.nextLine(); // Consumir la nueva línea
+            // Ingreso de tipo de llantas
+            String[] tireOptions = {"Llantas Todo Terreno", "Llantas de Nieve", "Llantas Deportivas"};
+            clonedVehicle.setwheels(selectOption(scanner, "Seleccione el tipo de llantas:", tireOptions));
 
             System.out.println();
 
@@ -72,86 +142,6 @@ public class Main {
             // Comparar memoria con el vehículo base
             boolean sameMemory = (baseVehicle == clonedVehicle);
             System.out.println("¿El vehículo base y el clonado comparten la misma referencia de memoria? " + sameMemory);
-
-            System.out.println();
-
-            // Preguntar qué desea hacer ahora
-            boolean validChoice = false;
-            while (!validChoice) {
-                System.out.println("=============================================");
-                System.out.println("              MENÚ PRINCIPAL                 ");
-                System.out.println("=============================================");
-                System.out.println("1. Clonar otro vehículo");
-                System.out.println("2. Ver cuántos vehículos se han clonado y sus características");
-                System.out.println("3. Comparar memoria entre dos vehículos clonados");
-                System.out.println("4. Salir");
-
-                System.out.print("Seleccione una opción (1-4): ");
-                if (scanner.hasNextInt()) {
-                    int option = scanner.nextInt();
-                    scanner.nextLine(); // Consumir la nueva línea
-
-                    switch (option) {
-                        case 1:
-                            validChoice = true; // Volver a clonar otro vehículo
-                            break;
-                        case 2:
-                            System.out.println("\n=============================================");
-                            System.out.println("        VEHÍCULOS CLONADOS HASTA AHORA       ");
-                            System.out.println("=============================================");
-                            System.out.println("Total de vehículos clonados: " + clonedVehicles.size());
-                            for (int i = 0; i < clonedVehicles.size(); i++) {
-                                System.out.println("\n---------------------------------------------");
-                                System.out.println("Vehículo #" + (i + 1) + ":");
-                                clonedVehicles.get(i).showInfo();
-                                System.out.println("---------------------------------------------");
-                                System.out.println();
-                            }
-                            break;
-                        case 3:
-                            if (clonedVehicles.size() < 2) {
-                                System.out.println();
-                                System.out.println("No hay suficientes vehículos clonados para comparar.");
-                                break;
-                            }
-
-                            System.out.println();
-                            System.out.println("Seleccione los vehículos que desea comparar:");
-                            for (int i = 0; i < clonedVehicles.size(); i++) {
-                                System.out.println((i + 1) + ". Vehículo #" + (i + 1));
-                            }
-
-                            System.out.print("Seleccione el primer vehículo (1-" + clonedVehicles.size() + "): ");
-                            int firstVehicle = scanner.nextInt() - 1;
-
-                            System.out.print("Seleccione el segundo vehículo (1-" + clonedVehicles.size() + "): ");
-                            int secondVehicle = scanner.nextInt() - 1;
-                            scanner.nextLine(); // Consumir la nueva línea
-
-                            //Verificar si la memoria es diferente para cada vehículo
-                            if (firstVehicle >= 0 && firstVehicle < clonedVehicles.size() &&
-                                    secondVehicle >= 0 && secondVehicle < clonedVehicles.size()) {
-                                boolean memoryComparison = clonedVehicles.get(firstVehicle) == clonedVehicles.get(secondVehicle);
-                                System.out.println("¿Los dos vehículos seleccionados comparten la misma referencia de memoria? " + memoryComparison);
-
-                            } else {
-                                System.out.println("Selección inválida. Intente de nuevo.");
-                            }
-                            System.out.println();
-                            break;
-                        case 4:
-                            System.out.println("\nSaliendo del sistema...");
-                            continueCloning = false;
-                            validChoice = true;
-                            break;
-                        default:
-                            System.out.println("Error: Opción no válida. Inténtelo de nuevo.");
-                    }
-                } else {
-                    System.out.println("Error: Ingrese solo números entre 1 y 4.");
-                    scanner.next();
-                }
-            }
         }
 
         System.out.println("\nGracias por usar el sistema de clonación de vehículos. ¡Hasta luego!");
@@ -170,7 +160,6 @@ public class Main {
             while (!scanner.hasNextInt()) {
                 System.out.println("Error: Ingrese solo números entre 1 y " + options.length);
                 scanner.next();
-                System.out.println();
             }
             choice = scanner.nextInt();
         } while (choice < 1 || choice > options.length);
