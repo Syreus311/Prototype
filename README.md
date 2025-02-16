@@ -61,7 +61,7 @@ Seleccione la marca:
 1. Nissan
 2. Ferrari
 3. Toyota
-Seleccione una opción (1-3): 1
+Seleccione una opción (1-3):
 ```
 
 ---
@@ -69,15 +69,15 @@ Seleccione una opción (1-3): 1
 ## Diagrama UML
 
 El siguiente diagrama muestra la estructura estándar del patrón Prototype:
-![Diagrama UML](uml/uml1.png)
+![Diagrama UML] (https://github.com/Syreus/Prototype/raw/main/uml1.png)
 
 El siguiente diagrama muestra la estructura del patrón implementado:
-![Diagrama UML](uml/uml2.png)
+![Diagrama UML] (https://github.com/Syreus/Prototype/raw/main/uml2.png)
 
 ---
 
 ## Explicación de la Implementación
-El patrón [Nombre del Patrón] ha sido implementado utilizando las siguientes clases principales:
+El patrón Prototype ha sido implementado utilizando las siguientes clases principales:
 - **Vehicle**: Explicación del propósito de la clase.
 - **VehiclePrototype**: Explicación del propósito de la clase.
 - **VehicleRegistry**: Explicación del propósito de la clase.
