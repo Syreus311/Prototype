@@ -55,19 +55,17 @@ mvn exec:java
 
 ## Ejemplo de Ejecución
 Al ejecutar el programa, deberías ver la siguiente salida:
-```
-¡Bienvenido al sistema de clonación de vehículos!
 
-=============================================
-       CLONACIÓN DE UN NUEVO VEHÍCULO
-=============================================
-Seleccione la marca:
-1. Nissan
-2. Ferrari
-3. Toyota
-Seleccione una opción (1-3):
 ```
-
+¡Bienvenido al sistema de clonación de vehículos
+=============================================
+              MENÚ PRINCIPAL
+=============================================
+1. Clonar un nuevo vehículo
+2. Ver cuántos vehículos se han clonado y sus características
+3. Comparar memoria entre dos vehículos clonados
+4. Salir
+Seleccione una opción (1-4):
 ---
 
 ## Diagrama UML
