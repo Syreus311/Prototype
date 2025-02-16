@@ -76,10 +76,10 @@ Seleccione una opción (1-4):
 ## Diagrama UML
 
 El siguiente diagrama muestra la estructura estándar del patrón Prototype:
-![Diagrama UML](uml1.png)
+![Diagrama UML](uml/uml1.png)
 
 El siguiente diagrama muestra la estructura del patrón implementado:
-![Diagrama UML](uml2.png)
+![Diagrama UML](uml/uml2.png)
 
 ---
 
