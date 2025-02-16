@@ -7,6 +7,7 @@ public class Vehicle implements VehiclePrototype {
     private String color;
     private String wheels;
 
+    // Constructor que inicializa las propiedades del vehículo al crear una nueva instancia
     public Vehicle(String bodywork, String model, String fuelType, String wheels, String color) {
         this.bodywork = bodywork;
         this.model = model;
@@ -23,23 +24,23 @@ public class Vehicle implements VehiclePrototype {
 
     // Métodos para modificar las propiedades después de clonar
     public void setBodywork(String bodywork) {
-        this.bodywork = bodywork;
+        this.bodywork = bodywork;  // Cambia el tipo de carrocería
     }
 
     public void setModel(String model) {
-        this.model = model;
+        this.model = model;  // Cambia el modelo
     }
 
     public void setFuelType(String fuelType) {
-        this.fuelType = fuelType;
+        this.fuelType = fuelType;  // Cambia el tipo de combustible
     }
 
     public void setwheels(String wheels) {
-        this.wheels = wheels;
+        this.wheels = wheels;  // Cambia el tipo de llanta
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.color = color;  // Cambia el color
     }
 
     // Método para mostrar información del vehículo
