@@ -38,7 +38,8 @@ cd Prototype
 
 2. **Compilar el proyecto:**
 ```bash
-mvn clean compile
+mvn clean install
+mvn clean compile              (opcional)
 ```
 
 3. **Ejecutar el proyecto:**
