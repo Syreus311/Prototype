@@ -13,6 +13,7 @@ Prototype
 ├── pom.xml                # Archivo de configuración de Maven
 ├── README.md              # Documentación del proyecto
 └── src/main/java          # Carpeta con los códigos
+    |
     ├── Main.java          # Para ejecutar el programa
     │
     └── Prototype
@@ -24,27 +25,14 @@ Prototype
 ---
 
 ## Dependencias Utilizadas
-Este proyecto utiliza las siguientes dependencias definidas en el archivo **pom.xml**:
-```xml
-<dependencies>
-    <!-- Dependencias estándar de Maven -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
-```
-
----
+Este proyecto no utiliza dependencias adicionales que deban ser definidas en el archivo **pom.xml**.
 
 ## Instrucciones de Instalación
 
 1. **Clonar el repositorio:**
 ```bash
-git clone https://github.com/usuario/nombre_repositorio.git
-cd nombre_repositorio
+git clone https://github.com/Syreus311/Prototype.git
+cd Prototype
 ```
 
 2. **Compilar el proyecto:**
