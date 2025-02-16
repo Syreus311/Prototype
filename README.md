@@ -16,6 +16,7 @@ Prototype
 ├── uml                    
 |   |── uml1.png           # Imagen con el diagrama UML estándar
 |   └── uml2.png           # Imagen con el diagrama UML implementado
+|
 └── src/main/java          # Carpeta con los códigos
     |
     ├── Main.java          # Para ejecutar el programa
